@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+border-bottom: solid black 3px;
+border-top: solid black 3px;
+background-color: #F3C89C;
+height: 100px;
+}
+
+
+
+.imgContainer{
+    
+    margin: 10px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+
+}
+
+.checkboxContainer{
+    display: flex;
+}
+
+header{
+    margin-bottom: 15px;
+}
+
+.imgDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    width: 225px;
+    transition: transform 0.7s ;
+}
+
+img:hover{
+    transform: scale(1.2);
+}
+

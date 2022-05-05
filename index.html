@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+        {
+          "imports": {
+            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+          }
+        }
+      </script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script type="module" src="app.js" defer></script>
+</head>
+<body>
+    <div id="app">
+
+        
+        <header>
+            <nav>
+                <h1>  
+                    Art Gallery
+                </h1>
+                
+            </nav>
+
+        </header>
+
+        <input type="checkbox" checked @click="ShowAll">Show All</input>
+
+
+       <!-- <div class="checkboxContainer">
+
+            <div v-for="tag in tags">
+                <input type="checkbox" v-model="tag" id="filterBox">
+                <label for="filterBox"></label>
+            </div>
+
+        </div>
+
+        -->
+        
+        
+        <input type= "checkbox" v-model="tags.woman">Woman</input>
+        
+        <input type= "checkbox" v-model="tags.JohannesVermeer">Johannes Vermeer</input>
+
+        <input type= "checkbox" v-model="tags.LeonardoDaVinci">Leonardo Da Vinci</input>
+
+        <input type= "checkbox" v-model="tags.VincentVanGogh">Vincent van Gogh</input>    
+
+        <input type= "checkbox" v-model="tags.GustavKlimt">Gustav Klimt</input>        
+
+        <input type= "checkbox" v-model="tags.SandroBotticelli">Sandro Botticelli</input>
+
+        <input type="checkbox" v-model="tags.JamesAbbottMcNeillWhistler"> James Abbott McNeill Whistler</input>
+
+        <input type="checkbox" v-model="tags.JanVanEyck">Jan van Eyck</input>
+
+        <input type="checkbox" v-model="tags.HieronymusBosch">Hieronymus Bosch</input>
+
+        <input type="checkbox" v-model="tags.GeorgesSeurat">Georges Seurat</input>
+
+        <input type="checkbox" v-model="tags.PabloPicasso">Pablo Picasso</input>
+
+        <input type="checkbox" v-model="tags.PieterBruegelTheElder">Pieter Bruegel the Elder</input>
+
+        <input type="checkbox" v-model="tags.ÉdouardManet">Édouard Manet</input>
+
+        <input type="checkbox" v-model="tags.PietMondrian">Piet Mondrian</input>
+
+        <input type="checkbox" v-model="tags.DiegoRodríguezDeSilvaYVelázquez">Diego Rodríguez de Silva y Velázquez</input>
+
+        <input type="checkbox" v-model="tags.FranciscoDeGoyaYLucientes">Francisco de Goya y Lucientes</input>
+
+        <input type="checkbox" v-model="tags.JeanAugusteDominiqueIngres">Jean Auguste Dominique Ingres</input>
+
+        <input type="checkbox" v-model="tags.EugèneDelacroix">Eugène Delacroix</input>
+        
+        <input type="checkbox" v-model="tags.ClaudeMonet">Claude Monet</input>
+        
+        <input type="checkbox" v-model="tags.CasparDavidFriedrich">Caspar David Friedrich</input>
+        
+        <input type="checkbox" v-model="tags.ThéodoreGéricault">Théodore Géricault</input>
+
+        <input type="checkbox" v-model="tags.EdwardHopper">Edward Hopper</input>
+        
+        <input type="checkbox" v-model="tags.MarcelDuchamp">Marcel Duchamp</input>
+
+        <input type="checkbox" v-model="tags.c1400">1400s</input>
+
+        <input type="checkbox" v-model="tags.c1500">1500s</input>
+
+        <input type="checkbox" v-model="tags.c1600">1600s</input>
+
+        <input type="checkbox" v-model="tags.c1700">1700s</input>
+
+        <input type="checkbox" v-model="tags.c1800">1800s</input>
+        
+        <input type="checkbox" v-model="tags.c1900">1900s</input>
+
+
+        <div class="imgContainer">
+            <div class="imgDiv">
+
+                <img src="A Sunday Afternoon on the Island of La Grande Jatte.webp" alt="" v-if="tags.GeorgesSeurat || tags.c1800">
+            </div>
+            
+            <div class="imgDiv">
+
+                <img src="Arrangement in Grey and Black No.1.webp" alt="" v-if="tags.woman || tags.JamesAbbottMcNeillWhistler || tags.c1800" >
+            </div>
+    
+            <div class="imgDiv">
+
+                <img src="Composition with Red Blue and Yellow.webp" alt="" v-if="tags.PietMondrian || tags.c1900">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Girl with a Pearl Earring.webp" alt="" v-if="tags.woman || tags.JohannesVermeer || tags.c1600">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Grande Odalisque.webp" alt="" v-if="tags.woman || tags.JeanAugusteDominiqueIngres || tags.c1800"> 
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Guernica.webp" alt="" v-if="tags.PabloPicasso || tags.c1900">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Impression, Sunrise.webp" alt="" v-if="tags.ClaudeMonet || tags.c1800">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Las Meninas.webp" alt="" v-if="tags.DiegoRodríguezDeSilvaYVelázquez || tags.c1600">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Le Déjeuner sur l'herbe.webp" alt="" v-if="tags.woman || tags.ÉdouardManet || tags.c1800">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Les Demoiselles d'Avignon.webp" alt="" v-if="tags.woman || tags.PabloPicasso || tags.c1900">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Nude Descending a Staircase, No.2.webp" alt="" v-if="tags.MarcelDuchamp || tags.c1900">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Liberty Leading the People.webp" alt="" v-if="tags.woman || tags.EugèneDelacroix || tags.c1800">
+            </div>
+            
+            <div class="imgDiv">
+                
+                <img src="Mona Lisa.webp" alt="" v-if="tags.woman || tags.LeonardoDaVinci || tags.c1500">
+            </div>
+            
+            <div class="imgDiv">
+                
+                <img src="Nighthawks.webp" alt="" v-if="tags.EdwardHopper || tags.c1900">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="The Arnolfini Portrait.webp" alt="" v-if="tags.JanVanEyck || tags.c1400">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="The Birth of Venus.webp" alt="" v-if="tags.woman || tags.SandroBotticelli || tags.c1400">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="The Garden of Earthly Delights.webp" alt="" v-if="tags.HieronymusBosch || tags.c1500">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="The Harvesters.webp" alt="" v-if="tags.PieterBruegelTheElder || tags.c1500">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="The Kiss.webp" alt="" v-if="tags.GustavKlimt || tags.c1900" >
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="The Naked Maja.webp" alt="" v-if="tags.woman || tags.FranciscoDeGoyaYLucientes || tags.c1800">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="The Raft of the Medusa.webp" alt="" v-if="tags.ThéodoreGéricault || tags.c1800">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="The Starry Night.webp" alt="" v-if="tags.VincentVanGogh || tags.c1800">
+            </div>
+
+            <div class="imgDiv">
+                
+                <img src="Wanderer above the Sea of Fog.webp" alt="" v-if="tags.CasparDavidFriedrich || tags.c1800">
+            </div>
+
+
+        </div>
+    
+    
+    
+    
+    
+    </div>
+</body>
+</html>
