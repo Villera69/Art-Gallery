@@ -18,6 +18,7 @@
     border: black 1px solid;
     border-radius: 1%;
     margin-left: 40px;
+    font-size: 21px;
 }
 
 .dropDownMenu div{
@@ -47,13 +48,6 @@ text-align: center;
     align-items: center;
 }
 
-nav{
-border-bottom: solid black 3px;
-border-top: solid black 3px;
-background-color: #265262;
-height: 110px;
-width: 100vw;
-}
 
 nav h1{
     text-align: center;
@@ -89,6 +83,10 @@ nav button{
 
 header{
     margin-bottom: 15px;
+    border-bottom: solid black 3px;
+    border-top: solid black 3px;
+    background-color: #265262;
+    height: 110px;
 }
 
 .imgDiv{
@@ -109,6 +107,8 @@ img:hover{
     transform: scale(1.2);
 }
 
+
+
 footer{
     background-color: #265262;
     border-bottom: solid black 3px;
@@ -118,7 +118,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     color: wheat;
-    width: 100vw;
+    
 }
 
 footer h3{
@@ -139,8 +139,10 @@ footer h3{
     width:300px;
     border: black 1px solid;
     border-radius: 1%;
-    margin-left: 15px
+    margin-left: 15px;
+    font-size: 18px;
     }
+
 
     .artistFilterContainer{
         display: grid;
