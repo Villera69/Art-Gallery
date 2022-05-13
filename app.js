@@ -5,6 +5,7 @@ createApp({
         return {
 
             ShowAllClicked: true,
+            filtersClicked: false,
 
 
             tags: {
@@ -44,6 +45,15 @@ createApp({
         }
     },
     methods: {
+
+        Filters(){
+
+
+            this.filtersClicked = !this.filtersClicked
+            
+            
+        },
+       
         ShowAll () {
 
             

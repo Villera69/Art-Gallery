@@ -1,13 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: 'Macondo', cursive;
+}
+
+.dropDownMenu{
+
+    position: relative;
+    background-color: #7B8E99;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    z-index: 2;
+    width: min-content;
+    border: black 1px solid;
+    border-radius: 1%;
+    margin-left: 40px;
+}
+
+.dropDownMenu div{
+    margin: 5px;
+}
+
+
+.filterDiv{
+text-align: center;
+}
+
+.artistFilterContainer{
+ display: grid;
+ grid-template-columns: repeat(2, 1fr);
+ list-style: none;
+ width: max-content;
+
+}
+
+.centuriesFilterContainer{
+    list-style: none;
+}
+
+.showAllDiv{
+    font-size: 21px;
+    width: max-content;
+    display: flex;
+    align-items: center;
 }
 
 nav{
 border-bottom: solid black 3px;
 border-top: solid black 3px;
-background-color: #F3C89C;
-height: 100px;
+background-color: #265262;
+height: 110px;
+}
+
+nav h1{
+    text-align: center;
+    color: wheat;
+    font-size: 50px;
+}
+
+nav button{
+    margin-left: 50px;
+    font-size: 21px;
+    background-color: wheat;
+    border: 0;
+    padding: 5px;
+    width: 100px;
+    border-radius: 6%;
 }
 
 
@@ -15,7 +75,6 @@ height: 100px;
 .imgContainer{
     
     margin: 10px;
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -32,17 +91,39 @@ header{
 }
 
 .imgDiv{
+  
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 img{
+    z-index: 1;
     width: 225px;
     transition: transform 0.7s ;
 }
 
 img:hover{
+    z-index: 1;
     transform: scale(1.2);
 }
+
+footer{
+    background-color: #265262;
+    border-bottom: solid black 3px;
+    border-top: solid black 3px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: wheat;
+}
+
+footer h3{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+
 
