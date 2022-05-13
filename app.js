@@ -50,8 +50,7 @@ createApp({
 
 
             this.filtersClicked = !this.filtersClicked
-            
-            
+              
         },
        
         ShowAll () {

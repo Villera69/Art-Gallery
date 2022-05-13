@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    border: 0;
     font-family: 'Macondo', cursive;
 }
 
@@ -33,7 +34,6 @@ text-align: center;
  grid-template-columns: repeat(2, 1fr);
  list-style: none;
  width: max-content;
-
 }
 
 .centuriesFilterContainer{
@@ -52,6 +52,7 @@ border-bottom: solid black 3px;
 border-top: solid black 3px;
 background-color: #265262;
 height: 110px;
+width: 100vw;
 }
 
 nav h1{
@@ -117,11 +118,39 @@ footer{
     align-items: center;
     justify-content: space-between;
     color: wheat;
+    width: 100vw;
 }
 
 footer h3{
     margin-left: 20px;
     margin-right: 20px;
+    font-size: 21px;
+}
+
+@media screen and (max-width: 850px) {
+
+    .dropDownMenu{
+
+    position: relative;
+    background-color: #7B8E99;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    width:300px;
+    border: black 1px solid;
+    border-radius: 1%;
+    margin-left: 15px
+    }
+
+    .artistFilterContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        list-style: none;
+        width: max-content;
+       }
+       
+
+
 }
 
 
